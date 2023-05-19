@@ -1,0 +1,46 @@
+Godot Game Development – Crash Course for Beginners
+https://youtu.be/S8lMTwSRoRg
+
+Tạo project
+Tạo file main.tscn
+
+7:30
+Giới thiệu các Node 2D
+
+Tạo Child Node
+Dấu cộng -> chọn Control -> BaseButton -> Button
+Zoom lại và kéo rộng button ra
+Nhập text 'Play' vào button
+Duplicate thành 2 nút. Đổi tên 1 nút thành 'Play', nút còn lại thành 'Quit'
+
+9:45
+Tạo Script
+
+Tạo main.gd, xóa hết nội dung file trừ extends Node2D
+Button Quit -> nhập Tooltip
+
+Run Project (F5) để chạy
+
+Tab Node -> Signals -> Filter Signals
+Chọn pressed()
+main.gd xuất hiện func _on_quit_pressed()
+Gõ get_tree().quit()
+Run Project (F5) để chạy, bấm quit là sẽ tắt màn hình.
+
+
+
+14:10 Your Second Scene
+
+
+
+
+
+
+
+
+
+
+
+
+
+
