@@ -22,4 +22,5 @@ button_mask = 5
 keep_pressed_outside = true
 text = "Quit"
 
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

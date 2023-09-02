@@ -31,11 +31,30 @@ Run Project (F5) để chạy, bấm quit là sẽ tắt màn hình.
 
 14:10 Your Second Scene
 
+Tạo node world.tscn
+
+Sau đó tạo sự kiện pressed() cho nút Play.
+
+get_tree().change_scene_to_file("res://World.tscn")
+
+Đường dẫn res://World.tscn có thể copy path từ file
+
+Tạo Label cho node world.tscn, nội dung "this is the world".
+
+Chơi game: bấm Play -> vào màn hình world thấy dòng chữ "this is the world".
+
+
+16:20 Downloading the game assets
+
+https://ansimuz.itch.io/
+https://ansimuz.itch.io/sunny-land-pixel-game-art
+https://ansimuz.itch.io/sunny-land-pixel-game-art/download/eyJleHBpcmVzIjoxNjkzNjI4NTM2LCJpZCI6MTQ3NzQ3fQ%3d%3d.Y4goYGcjU0ncs3HikDpQ323ZdXM%3d
+
+Copy 4 thư mục kéo qua Godot Engine để đưa 4 thư mục vào project
 
 
 
-
-
+17:15 Fixing Asset Pixelation
 
 
 
