@@ -130,10 +130,35 @@ Nhân vật không thể đi qua StaticBody được.
 
 24:30 Understanding The Default Player Script
 
+27:30 Animating the Player with Scripting
+@onready var anim = get_node("AnimatedSprite2D")
+
+func _ready():
+	anim.play("Idle")
 
 
+Trong hàm _physics_process(delta)
+
+Khi nhảy lên
+if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		anim.play("Jump")
 
 
+Khi đi
+if direction:
+		velocity.x = direction * SPEED
+		anim.play("Run")
+	else:
+		anim.play("Idle")
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+
+Chơi game.
+Khi nhảy lên, hình ảnh thay đổi.
+Khi chạy, hình ảnh thay đổi.
+
+29:55 Player Camera and Game Window Sizes
 
 
 
