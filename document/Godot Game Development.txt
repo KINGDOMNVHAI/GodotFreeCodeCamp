@@ -113,6 +113,31 @@ Cuối cùng, mang Player.tscn vào World
 
 Tạo node mới StaticBody2D ở trong World
 
+Tạo CollisionShape2D cho StaticBody2D
+Tab Inspector bên phải của CollisionShape2D
+Shape -> chọn RectangleShape2D
+
+Duplicate CollisionShape2D thành CollisionShape2D2
+Shape -> chọn Make Unique
+
+Duplicate CollisionShape2D2 thành CollisionShape2D3
+
+Tạo node mới Panel ở trong World
+
+Cuối cùng, chơi game.
+Nhân vật không thể đi qua StaticBody được.
+
+
+24:30 Understanding The Default Player Script
+
+
+
+
+
+
+
+
+
 
 
 
