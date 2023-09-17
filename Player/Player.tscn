@@ -1,0 +1,101 @@
+[gd_scene load_steps=19 format=3 uid="uid://ba18qpb4frwnv"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_boheg"]
+[ext_resource type="Texture2D" uid="uid://vwbru1uvi6h" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-1.png" id="1_cju5g"]
+[ext_resource type="Texture2D" uid="uid://c8sn5fxdrh0go" path="res://Sunny-land-assets-files/PNG/spritesheets/player-hurt.png" id="1_ggg15"]
+[ext_resource type="Texture2D" uid="uid://ct0xnpxxx2mrt" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-2.png" id="2_0mc1i"]
+[ext_resource type="Texture2D" uid="uid://cl0m77jdt7iug" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-3.png" id="3_gtbw3"]
+[ext_resource type="Texture2D" uid="uid://b6hhu7c6ayqkh" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-4.png" id="4_1cow6"]
+[ext_resource type="Texture2D" uid="uid://dya1hyhdioblm" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/jump/player-jump-1.png" id="5_eb7m1"]
+[ext_resource type="Texture2D" uid="uid://cescqcovqfs2r" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/jump/player-jump-2.png" id="6_nggq6"]
+[ext_resource type="Texture2D" uid="uid://52f6v5bmoe52" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/run/player-run-1.png" id="7_mfgk5"]
+[ext_resource type="Texture2D" uid="uid://bjonfjamjfu7a" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/run/player-run-2.png" id="8_rrwxx"]
+[ext_resource type="Texture2D" uid="uid://bg1c1joa2br11" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/run/player-run-3.png" id="9_p5gk6"]
+[ext_resource type="Texture2D" uid="uid://8f7shnniosry" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/run/player-run-4.png" id="10_fvgjf"]
+[ext_resource type="Texture2D" uid="uid://bpqlt7ho1b2e7" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/run/player-run-5.png" id="11_wv5uc"]
+[ext_resource type="Texture2D" uid="uid://1nfm2oybkabi" path="res://document/Sunny Land/__MACOSX/Sunny-land-assets-files/PNG/sprites/player/run/player-run-6.png" id="12_vj175"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_glkya"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrs7n"]
+atlas = ExtResource("1_ggg15")
+region = Rect2(0, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhb2p"]
+atlas = ExtResource("1_ggg15")
+region = Rect2(33, 0, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_irlxr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrs7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhb2p")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cju5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0mc1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gtbw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1cow6")
+}],
+"loop": true,
+"name": &"Idie",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eb7m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nggq6")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_mfgk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rrwxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p5gk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fvgjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wv5uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vj175")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_boheg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_glkya")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_irlxr")
+animation = &"Death"

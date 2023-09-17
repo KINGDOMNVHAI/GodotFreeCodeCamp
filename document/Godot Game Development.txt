@@ -56,7 +56,62 @@ Copy 4 thư mục kéo qua Godot Engine để đưa 4 thư mục vào project
 
 17:15 Fixing Asset Pixelation
 
+Mang icon.svg vào world
+Menu project -> project setting -> rendering -> textures
+Default Texture Filter
 
+Click vào icon, tab Inspector bên phải,
+CanvasItem -> Texture -> Filter có thể chọn lại
+
+Cuối cùng, xóa Label và Icon của World
+
+18:15 Making the Player Character
+
+Tạo node mới CharacterBody2D
+Tạo thư mục Player và save với tên Player.tscn
+
+CharacterBody2D có cảnh báo cần tạo CollisionShape2D
+
+Tạo CollisionShape2D
+Tab Inspector bên phải của CollisionShape2D
+Shape -> chọn CapsuleShape2D
+
+Tạo AnimatedSprite2D
+Tab Inspector bên phải AnimatedSprite2D
+Shape -> chọn SpriteFrames
+
+Animation Frames
+Đổi tên default thành Idie
+Tạo thêm 3 Animation Jump, Run, Death
+
+Vào thư mục Sunny-land-assets-files
+PNG -> sprites-> player -> idie - mang hết hình vào Idie
+
+Nếu các file .png bị dấu X không kéo vào được, kéo từ thư mục vào.
+
+Làm tương tự với Jump và Run
+
+Với Death, chọn Add frame from Sprite Sheet (Ctrl + O)
+Sunny-land-assets-files -> PNG -> sprites-> player -> spritesheets -> player-hurt.png
+
+Horizontal: 2
+Vertical: 1
+Click vào 2 hình, sau đó click Add 2 Frame(s)
+
+Đổi tên CharacterBody2D thành Player
+
+Attach Node Script:
+Template: CharacterBody2D Basic Movement
+Built-in Script: không check On
+Path: Player.gd
+
+Cuối cùng, mang Player.tscn vào World
+
+
+
+22:50 Making the Background
+
+Tạo node mới StaticBody2D ở trong World
 
 
 
