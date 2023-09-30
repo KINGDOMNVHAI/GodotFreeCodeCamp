@@ -160,7 +160,25 @@ Khi chạy, hình ảnh thay đổi.
 
 29:55 Player Camera and Game Window Sizes
 
+Comment các anim.play vừa tạo.
 
+Player tạo chid node Camera2D
+
+Project Setting
+Display -> Window
+Viewport width 576
+Viewport height 324
+
+Chơi game, cửa sổ đã bị thu nhỏ.
+Trả lại Viewport như cũ
+
+Chuyển qua Player.
+Bên phải sửa Zoom nhỏ lại thành 1.6
+
+Chơi game, menu vẫn không đổi, cửa sổ vẫn không đổi.
+Nhưng màn hình Player đã phóng to hơn.
+
+31:25 Animating the Player with AnimationTree
 
 
 
