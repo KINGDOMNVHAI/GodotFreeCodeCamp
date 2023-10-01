@@ -180,9 +180,52 @@ Nhưng màn hình Player đã phóng to hơn.
 
 31:25 Animating the Player with AnimationTree
 
+Tạo child node AnimationPlayer và AnimationTree
+
+Chọn AnimationPlayer
+Cửa sổ bên dưới, chọn Animation -> New -> Idle, Jump, Fall, Run, Death 
+
+Chọn AnimatedSprite2D
+Cửa sổ bên phải, tab Inspector, Animation chọn Idie
+Sau đó click Animation ở cửa sổ dưới, Animation Idie sẽ xuất hiện chìa khóa.
+Bỏ click Create RESET Track(s) -> Create
+
+Timeline animation bên dưới sẽ xuất hiện AnimatedSprite2D
+
+Tab Inspector -> chọn chìa khóa của Frame
+-> bỏ chọn 2 check -> Create
+Timeline animation bên dưới sẽ xuất hiện frame
+
+Sau đó để chuột vào timeline 0.1
+Đổi số frame ở tab Inspector
+Frame = 1 -> click chìa khóa
+Frame = 2 -> click chìa khóa
+Frame = 3 -> click chìa khóa
+3 frame được tạo ở timeline 0.1 0.2 0.3
+
+34:40
+Chọn Autoplay on load
+Nút này sẽ tự động chạy Idle. Và sẽ tự tạo vòng lặp.
+Chỉnh thời gian thành 0.4
+Animation Idle sẽ thực hiện trong 0.4s
+Nhớ click nút Animation looping
+Cuối cùng là chơi game.
+Nếu nhân vật cử động lặp đi lặp lại là đúng.
+
+35:00
+Làm tương tự với Run.
+Nhưng Run khác:
+- Có 5 frame
+- Chỉnh thời gian thành 0.55
+- Không chọn Autoplay on load
 
 
+Làm tương tự với Jump và Fall
+Nhưng Jump và Fall khác:
+- Cùng animation Jump
+- Frame đầu tiên, nhảy lên là Jump.
+- Frame thứ 2, rơi xuống là Fall.
 
-
+36:25 Code
 
 
