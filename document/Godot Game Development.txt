@@ -1,6 +1,6 @@
 Godot Game Development – Crash Course for Beginners
 https://youtu.be/S8lMTwSRoRg
-
+Giải nén Godot 4.0, bỏ godot console.
 Tạo project
 Tạo file main.tscn
 
@@ -226,6 +226,60 @@ Nhưng Jump và Fall khác:
 - Frame đầu tiên, nhảy lên là Jump.
 - Frame thứ 2, rơi xuống là Fall.
 
-36:25 Code
+36:30
+Đổi AnimatedSprite2D thành AnimationPlayer
+Phần if direction:
+anim.play("Run")
+Xem kết quả: nếu di chuyển, nhân vật đang chạy là đúng.
+
+Phần else:
+anim.play("Idle")
+
+Phần velocity.y = JUMP_VELOCITY
+anim.play("Jump")
+
+Xem kết quả: click Space để nhảy.
+Di chuyển, nhân vật chạy
+Ngưng di chuyển, nhân vật đứng.
+
+
+37:30
+Hiện tại, khi nhảy lên, giá trị y thay đổi
+
+Thêm điều kiện
+if velocity.y == 0:
+anim.play("Run")
+
+if velocity.y == 0:
+anim.play("Idle")
+
+Xem kết quả: có thể nhảy chéo, nhân vật có tư thế nhảy.
+
+if velocity.y > 0:
+anim.play("Fall")
+
+
+39:10
+Debug bằng cách thêm print(direction)
+
+Xem kết quả: khi di chuyển, màn hình console thêm 1 hoặc -1
+
+Đổi hướng nhảy
+if direction == -1:
+get_node("AnimatedSprite2D").flip_h = true
+elif direction == 1:
+get_node("AnimatedSprite2D").flip_h = false
+
+Mở tab Inspector, chọn Flip H
+
+Xem kết quả: khi di chuyển hoặc nhảy, mặt của nhân vật đổi hướng
+
+41:00
+Chuyển sang màn hình 2D
+Cho collision nhỏ lại
+
+
+41:40 Setting Up Paralax Backround
+
 
 
