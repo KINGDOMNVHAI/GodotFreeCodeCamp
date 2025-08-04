@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://nhobmht2g6ox"]
+[gd_scene load_steps=3 format=3 uid="uid://nhobmht2g6ox"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ujsum"]
+[ext_resource type="PackedScene" uid="uid://d36hf2fgcwh86" path="res://bg.tscn" id="2_yp2xa"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ujsum")
@@ -21,6 +22,8 @@ tooltip_text = "Bye"
 button_mask = 5
 keep_pressed_outside = true
 text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("2_yp2xa")]
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

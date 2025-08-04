@@ -1,6 +1,6 @@
 Godot Game Development – Crash Course for Beginners
 https://youtu.be/S8lMTwSRoRg
-Giải nén Godot 4.0, bỏ godot console.
+Giải nén Godot 4.0 Stable, bỏ godot console.
 Tạo project
 Tạo file main.tscn
 
@@ -280,6 +280,52 @@ Cho collision nhỏ lại
 
 
 41:40 Setting Up Paralax Backround
+
+Click dấu cộng Add a new scene
+-> Other Node -> Create New Node -> Parallax Background
+Trong Parallax Background tạo Parallax Layer
+Save với tên bg.tscn
+
+FileSystem bên dưới.
+environment -> back.png
+Kéo vào màn hình, giữ Shilf kéo rộng ra
+Đưa file back vào trong Parallax Layer
+
+Copy thêm ParallaxLayer2, mang hình middle.png vào
+Tiếp tục duplicate thêm nhiều hình middle đến khi full background
+
+Chọn ParallaxLayer của background.
+Inspector có phần Motion -> Mirroring
+Sửa thành số nào đó mà 2 background dính sát nhau.
+
+Sửa tên ParallaxBackground thành BG
+Click nút tạo script bên cạnh
+
+Code của bg
+Mang bg.tscn ở FileSystem vào Main. Play xem kết quả
+
+45:00 tiếp theo, chúng ta thay Scale
+ParallaxLayer2 đổi số scale
+
+Sunny Land Tress Props -> previews -> all-bg.png
+
+Tạo ParallaxLayer3, mang plant-house vào và đặt rải rác trong background
+
+Cuối cùng. Mang bg.tscn vào trong World.
+Xóa StaticBody2D. Nhân vật sẽ bị rơi xuống dưới
+
+
+
+0:47:31 BONUS! TileMaps and TileSets
+
+
+
+
+
+
+
+
+
 
 
 
